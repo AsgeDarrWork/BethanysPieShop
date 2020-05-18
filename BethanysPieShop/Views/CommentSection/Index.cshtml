@@ -1,0 +1,38 @@
+﻿
+
+<h3>
+    Comment section is coming soon.
+
+</h3>
+
+
+
+<partial name="_Comments" />
+
+@model CommentsViewModel
+
+<h1>Comments:</h1>
+
+
+
+@for (int i = Model.commentRepository.GetNumberOfComments(); i >= 1 ; i--)
+{
+    var comm = @Model.commentRepository.GetCommentById(i);
+
+    <h3 style="display:inline;">@comm.Name </h3>
+    <h5 style="display:inline;"> <i>  (@comm.Email)</i></h5>
+    <h4><i>@comm.CComment</i></h4>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+﻿@model HomeViewModel
+
+
+<partial name="_Carousel" />
+
+<h2>Pies of the week</h2>
+<h4>Our weekly selection - just for you!</h4>
+
+<div class="row">
+
+    @foreach (var pie in Model.PiesOfTheWeek)
+    {
+        <partial name="_PieCard" model="pie" />
+    }
+
+</div>
+
+
+
+
+<div>
+    <h4> Search by image; </h4>
+    <form asp-controller="FileUpload" asp-action="ImageSearch"
+          enctype="multipart/form-data" method="post">
+        <h4><input type="file" name="file" /></h4>
+        <h4><button type="submit">Submit</button></h4>
+    </form>
+
+   
+
+</div>
+

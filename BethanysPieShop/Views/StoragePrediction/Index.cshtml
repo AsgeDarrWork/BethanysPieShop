@@ -1,0 +1,83 @@
+﻿@model StorageViewModel
+
+<h3>
+    Storage prediction.
+
+</h3>
+
+<h4>Current stock of all pies:</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">@Model.pieRepository.GetPieById(1).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(2).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(3).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(4).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(5).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(6).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(7).Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(1).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(2).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(3).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(4).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(5).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(6).ToString()</td>
+            <td class="text-center">@Model.storageRepository.GetStorageByPieId(7).ToString()</td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+@{int p1 = @Model.storageRepository.GetPredictionByIdAsync(1).Result;}
+@{int p2 = @Model.storageRepository.GetPredictionByIdAsync(2).Result;}
+@{int p3 = @Model.storageRepository.GetPredictionByIdAsync(3).Result;}
+@{int p4 = @Model.storageRepository.GetPredictionByIdAsync(4).Result;}
+@{int p5 = @Model.storageRepository.GetPredictionByIdAsync(5).Result;}
+@{int p6 = @Model.storageRepository.GetPredictionByIdAsync(6).Result;}
+@{int p7 = @Model.storageRepository.GetPredictionByIdAsync(6).Result;}
+
+
+<h4>Prediction for a possible storage for next week's pies:</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">@Model.pieRepository.GetPieById(1).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(2).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(3).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(4).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(5).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(6).Name</th>
+            <th class="text-center">@Model.pieRepository.GetPieById(7).Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="text-center">@p1</td>
+            <td class="text-center">@p2</td>
+            <td class="text-center">@p3</td>
+            <td class="text-center">@p4</td>
+            <td class="text-center">@p5</td>
+            <td class="text-center">@p6</td>
+            <td class="text-center">@p7</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h4>Orderlist:</h4>
+<h5>@Model.pieRepository.GetPieById(1).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(1),p1).ToString() </h5>
+<h5>@Model.pieRepository.GetPieById(2).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(2), p2).ToString()</h5>
+<h5>@Model.pieRepository.GetPieById(3).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(3), p3).ToString()</h5>
+<h5>@Model.pieRepository.GetPieById(4).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(4), p4).ToString()</h5>
+<h5>@Model.pieRepository.GetPieById(5).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(5), p5).ToString()</h5>
+<h5>@Model.pieRepository.GetPieById(6).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(6), p6).ToString()</h5>
+<h5>@Model.pieRepository.GetPieById(7).Name: @Model.storageRepository.GetDifference(@Model.storageRepository.GetStorageByPieId(7), p7).ToString()</h5>
