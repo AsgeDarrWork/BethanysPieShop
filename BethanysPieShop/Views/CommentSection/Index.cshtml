@@ -13,15 +13,29 @@
 
 <h1>Comments:</h1>
 
+<style>
 
 
-@for (int i = Model.commentRepository.GetNumberOfComments(); i >= 1 ; i--)
+
+    .line-breaks {
+        white-space: pre-line;
+        tab-size: 3;
+    }
+</style>
+
+@for (int i = Model.commentRepository.GetNumberOfComments(); i >= 1; i--)
 {
     var comm = @Model.commentRepository.GetCommentById(i);
 
     <h3 style="display:inline;">@comm.Name </h3>
     <h5 style="display:inline;"> <i>  (@comm.Email)</i></h5>
     <h4><i>@comm.CComment</i></h4>
+
+
+    <span class="line-breaks">@Model.commentRepository.AddSentimentByCommentId(i)</span>
+    <br>
+    <br>
+    <br>
 
 }
 

@@ -1,13 +1,12 @@
-﻿<Properties StartupConfiguration="{099043BB-89A0-4CB0-8F7F-33EEC110A15C}|Default">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{099043BB-89A0-4CB0-8F7F-33EEC110A15C}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.BethanysPieShop PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BethanysPieShop/Views/CommentSection/Index.cshtml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="BethanysPieShop/Startup.cs" Line="43" Column="73" />
-      <File FileName="BethanysPieShop/Views/CommentSection/Index.cshtml" Line="20" Column="1" />
-      <File FileName="BethanysPieShop/Views/Shared/_Comments.cshtml" Line="40" Column="1" />
-      <File FileName="BethanysPieShop/Controllers/CommentSectionController.cs" Line="57" Column="43" />
-      <File FileName="BethanysPieShop/Models/CommentRepository.cs" Line="97" Column="1" />
-      <File FileName="BethanysPieShop/Models/ICommentRepository.cs" Line="9" Column="1" />
+      <File FileName="BethanysPieShop/Views/CommentSection/Index.cshtml" Line="1" Column="1" />
+      <File FileName="BethanysPieShop/Controllers/CommentSectionController.cs" Line="51" Column="17" />
+      <File FileName="BethanysPieShop/Models/CommentRepository.cs" Line="192" Column="47" />
+      <File FileName="BethanysPieShop/Models/ICommentRepository.cs" Line="16" Column="15" />
       <File FileName="BethanysPieShop/ViewModels/CommentsViewModel.cs" Line="15" Column="31" />
       <File FileName="BethanysPieShop/Models/PieRepository.cs" Line="36" Column="1" />
     </Files>
@@ -17,17 +16,13 @@
           <Node name="BethanysPieShop" expanded="True">
             <Node name="BethanysPieShop" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="CommentRepository.cs" selected="True" />
+              </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="CommentSection" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-                <Node name="Pie" expanded="True" />
+                <Node name="CommentSection" expanded="True" />
                 <Node name="Shared" expanded="True" />
-                <Node name="ShoppingCart" expanded="True" />
-                <Node name="StoragePrediction" expanded="True" />
               </Node>
             </Node>
           </Node>

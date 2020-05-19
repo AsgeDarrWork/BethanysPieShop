@@ -302,3 +302,6 @@
 /Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/obj/Debug/netcoreapp3.0/BethanysPieShop.csprojAssemblyReference.cache
 /Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/obj/Debug/netcoreapp3.0/Razor/Views/CommentSection/Index.cshtml.g.cs
 /Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/obj/Debug/netcoreapp3.0/Razor/Views/Shared/_Comments.cshtml.g.cs
+/Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/bin/Debug/netcoreapp3.0/Azure.AI.TextAnalytics.dll
+/Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/bin/Debug/netcoreapp3.0/Azure.Core.dll
+/Users/asgedarr/Projects/BethanysPieShop/BethanysPieShop/bin/Debug/netcoreapp3.0/Microsoft.Bcl.AsyncInterfaces.dll

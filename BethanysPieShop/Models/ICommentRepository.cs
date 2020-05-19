@@ -13,6 +13,8 @@ namespace BethanysPieShop.Models
         Comment GetCommentById(int commentId);
         int GetNumberOfComments();
         void Add(Comment comment);
-       
+        string AddSentimentByCommentId(int id);
+
+
     }
 }

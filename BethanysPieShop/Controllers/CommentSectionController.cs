@@ -48,14 +48,12 @@ namespace BethanysPieShop.Controllers
             if (ModelState.IsValid)
             {
                 _commentRepository.Add(comment);
-                //await _commentRepository.SaveChangesAsync();
-
-                //return View("Details", new Comment { PostId = comment.PostId });
+                
             }
 
 
             return RedirectToAction("Index", "CommentSection");
-            //return View("~/Views/CommentSection/Index.cshtml");
+          
             
         }
 
