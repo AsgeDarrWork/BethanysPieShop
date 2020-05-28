@@ -34,6 +34,14 @@ Walk through every steup of the setup
 
 #### 4. Setup Storage prediction
 - Nothing needed but for information is the connection string in the StorageRepository.cs file
-##### 4.B 
-
+##### 4.B If you have created your own db
+- Create a ML environment
+- Add a VM to the environment. 
+- Add your sql database to a datastore
+- Create A dataset from the datastore
+- Start jupyter from the VM
+- Upload the files from the 'ML Studio Files' folder
+- Run training.ipynb
+- Run deploy.ipynb
+- Replace the connection string in the StorageRepository.cs file with your own from deploy.ipynb
 
