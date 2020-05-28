@@ -1,23 +1,23 @@
 # BethanysPieShop
-
+Walk through every steup of the setup
 
 ### Setup Bethanys Pie Shop.
 
-#### SQL db (Creating a new db - optional)
+#### 1.A Setup SQL db (Creating a new db - optional)
 - Create a sql server and database on azure and change the "DefaultConnection" in appsettings.json in the solution to the connection string.
 - From the terminal in the solution folder run following migration commands:  
   - dotnet ef database update InitialMigration
   - dotnet ef database update CommentSectionAdded 
 - Ensure that the ip is allowed in the sql server firewall
 
-#### SQL db (Connecting to the existing db)
+#### 1.B Setup SQL db (Connecting to the existing db)
 - leave the connection string "DefaultConnection" as it is.
 
 
-#### Image classification search
+#### 2. Setup Image classification search
 - Nothing needed but for information is the connection string in the appsettings.json file and the Prediction-Key is in the FileUploadController.cs
 
-#### Cognitive search
+#### 3. Setup Cognitive search
 - Create a storage account
 - Create a container named 'data'
 - Upload all files in the folder blobstorage to the data container
@@ -32,7 +32,7 @@
 - Use the 'Search Explorer' to search in the files or use the URL to create posts.
 
 
-#### Storage prediction
+#### 4. Setup Storage prediction
 - Nothing needed but for information is the connection string in the StorageRepository.cs file
 
 
