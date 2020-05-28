@@ -45,3 +45,4 @@ Walk through every steup of the setup
 - Run deploy.ipynb
 - Replace the connection string in the StorageRepository.cs file with your own from deploy.ipynb
 
+#### 5. Setup Cognitive textual analysis
