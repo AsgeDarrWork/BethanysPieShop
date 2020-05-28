@@ -34,5 +34,6 @@ Walk through every steup of the setup
 
 #### 4. Setup Storage prediction
 - Nothing needed but for information is the connection string in the StorageRepository.cs file
+##### 4.B 
 
 
