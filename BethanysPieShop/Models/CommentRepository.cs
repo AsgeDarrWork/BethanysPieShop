@@ -13,8 +13,8 @@ namespace BethanysPieShop.Models
     public class CommentRepository: ICommentRepository
     {
         private readonly AppDbContext _appDbContext;
-        private static readonly AzureKeyCredential credentials = new AzureKeyCredential("0e226cb95ff140668ea3a5e6c93e03f9");
-        private static readonly Uri endpoint = new Uri("https://bps-text-analysis.cognitiveservices.azure.com/");
+        private static readonly AzureKeyCredential credentials = new AzureKeyCredential("964b259ac0264466b3cdbda5dcd43473");
+        private static readonly Uri endpoint = new Uri("https://bethanys-text-analysis.cognitiveservices.azure.com/");
 
 
 

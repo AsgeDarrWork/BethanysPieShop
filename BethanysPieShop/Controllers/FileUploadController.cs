@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using BethanysPieShop.ViewModels;
 using Newtonsoft.Json.Linq;
+using Microsoft.Extensions.Configuration;
 
 
 
@@ -22,11 +23,13 @@ namespace BethanysPieShop.Controllers
     {
         private readonly IPieRepository _pieRepository;
         private readonly ICategoryRepository _categoryRepository;
+        public IConfiguration Configuration { get; }
 
-        public FileUploadController(IPieRepository pieRepository, ICategoryRepository categoryRepository)
+        public FileUploadController(IPieRepository pieRepository, ICategoryRepository categoryRepository, IConfiguration configuration)
         {
             _pieRepository = pieRepository;
             _categoryRepository = categoryRepository;
+            Configuration = configuration;
         }
 
 
@@ -56,15 +59,15 @@ namespace BethanysPieShop.Controllers
         //public IActionResult Index() => List("Fruit pies");
 
 
-        public static async Task<string> MakePredictionRequestNew(byte[] byteData)
+        public async Task<string> MakePredictionRequestNew(byte[] byteData)
         {
             var client = new HttpClient();
 
             // Request headers - replace this example key with your valid Prediction-Key.
-            client.DefaultRequestHeaders.Add("Prediction-Key", "72dbf2d29df44dfbbeb5e6b3a457158e");
+            client.DefaultRequestHeaders.Add("Prediction-Key", "fea09d124b2f4e39a759750fc94f108a");
 
             // Prediction URL - replace this example URL with your valid Prediction URL.
-            string url = "https://imagesearchclassifier.cognitiveservices.azure.com/customvision/v3.0/Prediction/864ab938-2427-4541-acc4-c79343555f02/classify/iterations/Iteration2/image";
+            string url = Configuration.GetConnectionString("ImageSerchConnection");
 
             HttpResponseMessage response;
 

@@ -69,9 +69,10 @@ namespace BethanysPieShop.Models
 
             strInput = "[" + strInput + "]";
 
-            strInput = "[[3,2020,9,5,9],[3,2020,10,1,2]]";
+            //strInput = "[[3,2020,9,5,9],[3,2020,10,1,2]]";
 
-            string url = "http://5d5e8a64-bb0c-4f0e-9947-c379e6fbf3f1.eastus.azurecontainer.io/score?data=";
+
+            string url = "http://a628f561-3428-4825-863f-6ccf9cc72e7d.eastus2.azurecontainer.io/score?data=";
             string data = strInput;
 
             using (var httpClient = new HttpClient())
