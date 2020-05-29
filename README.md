@@ -34,6 +34,7 @@ Walk through every steup of the setup
 
 #### 4. Setup Storage prediction
 - Nothing needed but for information is the connection string in the StorageRepository.cs file
+
 ##### 4.B If you have created your own db
 - Create a ML environment
 - Add a VM to the environment. 
@@ -46,3 +47,4 @@ Walk through every steup of the setup
 - Replace the connection string in the StorageRepository.cs file with your own from deploy.ipynb
 
 #### 5. Setup Cognitive textual analysis
+- Nothing needed but for information is the connection string in the CommentRepository.cs file
