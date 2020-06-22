@@ -40,6 +40,7 @@ Walk through every steup of the setup
 - Add a VM to the environment. 
 - Add your sql database to a datastore
 - Create A dataset from the datastore
+-- SELECT * FROM [dbo].[Storages]
 - Start jupyter from the VM
 - Upload the files from the 'ML Studio Files' folder
 - Run training.ipynb
